@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/VirtualMap.unity
+    guid: 12f55d73f3b6627448650b26021b8427
+  - enabled: 1
+    path: Assets/Scenes/CarVille.unity
+    guid: ac879fa6e77dec045a09d9e8e4a62433
+  - enabled: 1
+    path: Assets/Scenes/PlaneCity.unity
+    guid: 6e08a6b84b0b50f4b869c8c1b93f4360
+  - enabled: 1
+    path: Assets/Scenes/TrainYard.unity
+    guid: 4f1f3a407a537cf418e9dda43b84f3d7
   m_configObjects: {}
