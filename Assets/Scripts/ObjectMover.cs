@@ -18,6 +18,7 @@ public class ObjectMover : MonoBehaviour
     [Header("Platform Variables")]
     private GameObject platform;
     private SpinningPlatform platformScript; // Used to access if there is object on the platform
+    private Animator platformAnim;
     private Transform platformTransform; // The platform this object is on
     public bool isOnPlatform;
 
@@ -50,6 +51,7 @@ public class ObjectMover : MonoBehaviour
         else
         {
             platformScript = platform.GetComponent<SpinningPlatform>();
+            platformAnim = platform.GetComponent<Animator>();
         }
 
         // Set the original position and rotation of the object
@@ -68,11 +70,16 @@ public class ObjectMover : MonoBehaviour
             // set these to trye for spinning and stuff
             platformScript.objectOnPlatform = true;
             rb.freezeRotation = true;
+
+            platformAnim.SetBool("objectGrabbed", true);
         }
     }
 
     private void OnMouseDown()
     {
+        // Make platform appear when an object is grabbed
+        platformAnim.SetBool("objectGrabbed", true);
+
         // Set to false, to let model be moved off platform
         isOnPlatform = false;
         
@@ -103,6 +110,12 @@ public class ObjectMover : MonoBehaviour
         // Reset position and rotation if not on platform
         transform.position = originalPos;
         transform.rotation = originalRot;
+
+        // Make platform disappear when an object is dropped
+        if (!isOnPlatform)
+        {
+            platformAnim.SetBool("objectGrabbed", false);
+        }
     }
 
     // When in trigger of platform move the car onto it
