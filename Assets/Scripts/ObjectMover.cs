@@ -52,6 +52,13 @@ public class ObjectMover : MonoBehaviour
         {
             platformScript = platform.GetComponent<SpinningPlatform>();
             platformAnim = platform.GetComponent<Animator>();
+
+            // The animator is used to change the state of the platform using objectState animation int
+            // The order is as follows:
+            // 1 - Platform appears, this happens when an object is grabbed
+            // 2 - Move platform to the left, this happens when an object is placed on the platform
+            // 3 - Move platform to the Center, this happens when an object is taken from the platform
+            // 4 - Platform disappears, this happens when an object is dropped
         }
 
         // Set the original position and rotation of the object
@@ -71,14 +78,14 @@ public class ObjectMover : MonoBehaviour
             platformScript.objectOnPlatform = true;
             rb.freezeRotation = true;
 
-            platformAnim.SetBool("objectGrabbed", true);
+            platformAnim.SetInteger("objectState", 2);
         }
     }
 
     private void OnMouseDown()
     {
         // Make platform appear when an object is grabbed
-        platformAnim.SetBool("objectGrabbed", true);
+        platformAnim.SetInteger("objectState", 1);
 
         // Set to false, to let model be moved off platform
         isOnPlatform = false;
@@ -114,7 +121,7 @@ public class ObjectMover : MonoBehaviour
         // Make platform disappear when an object is dropped
         if (!isOnPlatform)
         {
-            platformAnim.SetBool("objectGrabbed", false);
+            platformAnim.SetInteger("objectState", 4);
         }
     }
 
