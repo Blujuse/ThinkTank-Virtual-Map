@@ -25,14 +25,32 @@ public class ObjectMover : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main; // Assign the main camera
+        if (mainCamera == null) // Check if camera is found
+        {
+            Debug.LogError("No camera found");
+            return;
+        }
 
         cameraZDistance = mainCamera.WorldToScreenPoint(transform.position).z; // Calculate the distance from the camera to the object
 
         rb = GetComponent<Rigidbody>(); // Getting rigidbody
+        if (rb == null) // Check if rigidbody is found
+        {
+            Debug.LogError("No rigidbody found");
+            return;
+        }
 
         // Get platform
         platform = GameObject.FindGameObjectWithTag("Platform");
-        platformScript = platform.GetComponent<SpinningPlatform>();
+        if (platform == null) // Check if platform is found
+        {
+            Debug.LogError("No platform found");
+            // No return for testing object moving and returning to spawn location
+        }
+        else
+        {
+            platformScript = platform.GetComponent<SpinningPlatform>();
+        }
 
         // Set the original position and rotation of the object
         originalPos = transform.position;
@@ -57,7 +75,11 @@ public class ObjectMover : MonoBehaviour
     {
         // Set to false, to let model be moved off platform
         isOnPlatform = false;
-        platformScript.objectOnPlatform = false;
+        
+        if (platformScript != null)
+        {
+            platformScript.objectOnPlatform = false;
+        }
         
         // Remove child to stop it getting rotated when not on platform
         if (this.transform.parent != null)
