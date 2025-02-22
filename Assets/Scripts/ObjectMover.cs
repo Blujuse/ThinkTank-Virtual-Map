@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using TMPro;
 
 public class ObjectMover : MonoBehaviour
 {
@@ -21,6 +23,16 @@ public class ObjectMover : MonoBehaviour
     private Animator platformAnim;
     private Transform platformTransform; // The platform this object is on
     public bool isOnPlatform;
+
+    [Header("Menu Variables")]
+    private GameObject menu;
+    private Animator menuAnim;
+    private GameObject vehicleHeaderObj;
+    private GameObject vehicleDescObj;
+    private TMP_Text vehicleHeader;
+    private TMP_Text vehicleText;
+    public string vehicleName;
+    public string vehicleInfo;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +73,44 @@ public class ObjectMover : MonoBehaviour
             // 4 - Platform disappears, this happens when an object is dropped
         }
 
+        // Get menu
+        menu = GameObject.FindGameObjectWithTag("Menu");
+        if (menu == null) // Check if menu is found
+        {
+            Debug.LogError("No menu found");
+            return;
+        }
+        else
+        {
+            menuAnim = menu.GetComponent<Animator>();
+        }
+
+        // Get the text object
+        vehicleHeaderObj = GameObject.FindGameObjectWithTag("Header");
+        if (vehicleHeaderObj == null) // Check if text object is found
+        {
+            Debug.LogError("No text object found");
+            return;
+        }
+        else
+        {
+            // Get the text mesh pro components
+            vehicleHeader = vehicleHeaderObj.GetComponent<TMP_Text>();
+        }
+
+        // Get the text object
+        vehicleDescObj = GameObject.FindGameObjectWithTag("Desc");
+        if (vehicleDescObj == null) // Check if text object is found
+        {
+            Debug.LogError("No text object found");
+            return;
+        }
+        else
+        {
+            // Get the text mesh pro components
+            vehicleText = vehicleDescObj.GetComponent<TMP_Text>();
+        }
+
         // Set the original position and rotation of the object
         originalPos = transform.position;
         originalRot = transform.rotation;
@@ -78,7 +128,13 @@ public class ObjectMover : MonoBehaviour
             platformScript.objectOnPlatform = true;
             rb.freezeRotation = true;
 
+            // Make platform move to the left when object is placed on it
             platformAnim.SetInteger("objectState", 2);
+            menuAnim.SetBool("infoOpen", true);
+
+            // Set the text to car on platform
+            vehicleHeader.SetText(vehicleName);
+            vehicleText.SetText(vehicleInfo);
         }
     }
 
@@ -122,6 +178,7 @@ public class ObjectMover : MonoBehaviour
         if (!isOnPlatform)
         {
             platformAnim.SetInteger("objectState", 4);
+            menuAnim.SetBool("infoOpen", false);
         }
     }
 
