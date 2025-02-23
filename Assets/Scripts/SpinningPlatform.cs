@@ -12,6 +12,20 @@ public class SpinningPlatform : MonoBehaviour
     // Stores where the mouse was last
     private Vector3 lastMousePosition;
 
+    // Stores if an object is currently on the platform
+    [HideInInspector] public bool objectOnPlatform = false;
+    private BoxCollider boxCol;
+
+    private void Start()
+    {
+        boxCol = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        ObjectChecker();
+    }
+
     // When mouse is dragged over the platform spin it
     private void OnMouseDrag()
     {
@@ -32,5 +46,20 @@ public class SpinningPlatform : MonoBehaviour
     {
         // Initialize last position on mouse down
         lastMousePosition = Input.mousePosition;
+    }
+
+    private void ObjectChecker()
+    {
+        // Cheap way of making it so other objects cant be placed on the platform
+        // Need the box collider for rotation logic, so cant use enable
+        // Set it from a trigger to collider to stop the OnTriggerEnter logic from working
+        if (objectOnPlatform)
+        {
+            boxCol.isTrigger = false;
+        }
+        else
+        {
+            boxCol.isTrigger = true;
+        }
     }
 }
