@@ -16,6 +16,7 @@ public class ObjectMover : MonoBehaviour
     private Vector3 originalPos;
     private Quaternion originalRot;
     public float yOffset;
+    private bool isHeld;
 
     [Header("Platform Variables")]
     private GameObject platform;
@@ -166,6 +167,9 @@ public class ObjectMover : MonoBehaviour
         // Set the object's position to the mouse position
         Vector3 newPos = mainCamera.ScreenToWorldPoint(screenPos);
         transform.position = newPos;
+
+        // Sets to true so the object is only placed when held
+        isHeld = true;
     }
 
     private void OnMouseUp()
@@ -180,12 +184,16 @@ public class ObjectMover : MonoBehaviour
             platformAnim.SetInteger("objectState", 4);
             menuAnim.SetBool("infoOpen", false);
         }
+
+        // Sets to false so the object is only placed when held
+        isHeld = false;
     }
 
     // When in trigger of platform move the car onto it
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Platform"))
+        // Using isHeld to make sure object is only placed when it should be
+        if (other.CompareTag("Platform") && isHeld)
         {
             Debug.Log("Placed");
 
