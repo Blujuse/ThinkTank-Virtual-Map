@@ -3,7 +3,27 @@ guid: e41456b4cdb414f4b90b57de0a64aa37
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light
+    second: {fileID: 2100000, guid: 2c32a50956404ce4986f8d5dfa78a6d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaform
+    second: {fileID: 2100000, guid: b5a6e6e36f2fbd243b5c36a45d30b54c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Platform_Light_Base
+    second: {fileID: 2100000, guid: 2a747769573544445ab2e1060e3e51c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Platform_Raised
+    second: {fileID: 2100000, guid: 8ad77e95d3e683e4cb75507cf3523d53, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +110,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.5
+    globalScale: 50
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
