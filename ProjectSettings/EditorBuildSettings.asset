@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Attract_Screen.unity
+    guid: 7633f7e51441c6e4e80e6e7c7e1b4536
+  - enabled: 1
     path: Assets/Scenes/VirtualMap.unity
     guid: 12f55d73f3b6627448650b26021b8427
   - enabled: 1
