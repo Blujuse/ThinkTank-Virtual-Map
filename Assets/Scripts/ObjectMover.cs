@@ -35,7 +35,8 @@ public class ObjectMover : MonoBehaviour
     private TMP_Text vehicleText;
     public string vehicleName;
     public string vehicleInfo;
-    public Image vehicleImage;
+    public Image vehicleImageCanvas;
+    public Sprite vehicleImages;
 
     // Start is called before the first frame update
     void Start()
@@ -138,6 +139,8 @@ public class ObjectMover : MonoBehaviour
             // Set the text to car on platform
             vehicleHeader.SetText(vehicleName);
             vehicleText.SetText(vehicleInfo);
+
+            vehicleImageCanvas.sprite = vehicleImages;
         }
     }
 
