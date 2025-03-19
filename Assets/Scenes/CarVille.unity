@@ -592,6 +592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 284042967}
   - component: {fileID: 284042966}
+  - component: {fileID: 284042968}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -676,6 +677,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &284042968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284042965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!4 &393266147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
@@ -971,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194eb16e2806054eb68535d834fa455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   AttractScreen: {fileID: 1535812537}
 --- !u!4 &647624464 stripped
 Transform:
@@ -2516,15 +2541,15 @@ PrefabInstance:
     - target: {fileID: 1115842195246484323, guid: e41456b4cdb414f4b90b57de0a64aa37, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 611e759a6e46b174ba7803e413bddd5f, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ad77e95d3e683e4cb75507cf3523d53, type: 2}
     - target: {fileID: 8619070368036024488, guid: e41456b4cdb414f4b90b57de0a64aa37, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6f1df9257be9b664ca18717776615670, type: 2}
+      objectReference: {fileID: 2100000, guid: 2a747769573544445ab2e1060e3e51c6, type: 2}
     - target: {fileID: 9194509242015492025, guid: e41456b4cdb414f4b90b57de0a64aa37, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e4dc462a4aedab43b6d59c95b256223, type: 2}
+      objectReference: {fileID: 2100000, guid: b5a6e6e36f2fbd243b5c36a45d30b54c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
