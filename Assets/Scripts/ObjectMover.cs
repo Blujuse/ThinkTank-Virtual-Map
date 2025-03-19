@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ObjectMover : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class ObjectMover : MonoBehaviour
     private TMP_Text vehicleText;
     public string vehicleName;
     public string vehicleInfo;
+    public Image vehicleImage;
 
     // Start is called before the first frame update
     void Start()
