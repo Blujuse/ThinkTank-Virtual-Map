@@ -582,6 +582,12 @@ MonoBehaviour:
   isOnPlatform: 0
   vehicleName: Rover 3500
   vehicleInfo: This is the Rover description
+  vehicleImageCanvas: {fileID: 578987451880747495}
+  vehicleImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &284042965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1521,6 +1527,7 @@ GameObject:
   - component: {fileID: 874376931}
   - component: {fileID: 874376930}
   - component: {fileID: 874376929}
+  - component: {fileID: 874376932}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1569,7 +1576,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1602,6 +1609,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874376932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874376928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!4 &918269268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
@@ -1647,6 +1698,12 @@ MonoBehaviour:
   isOnPlatform: 0
   vehicleName: MG J2 Midget
   vehicleInfo: This is the MG J2 Midget description
+  vehicleImageCanvas: {fileID: 578987451880747495}
+  vehicleImages:
+  - {fileID: 21300000, guid: 0e6e5beb22c69bd4fbd1dd0b9427b292, type: 3}
+  - {fileID: 21300000, guid: 67f417a1bb7160247be1e1062d2ab9a9, type: 3}
+  - {fileID: 21300000, guid: f2f01e29a1e7a084a8e0e14b6ea513c7, type: 3}
+  - {fileID: 21300000, guid: 5c43e365246bad34fa9627cca5d9bb41, type: 3}
 --- !u!54 &998052231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2130,7 +2187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2586,7 +2643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a324119a464da44ab00b61623b4e905, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2836,25 +2893,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 493684469963560032, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -664
+      objectReference: {fileID: 0}
+    - target: {fileID: 493684469963560032, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 498
+      objectReference: {fileID: 0}
+    - target: {fileID: 834430116821482722, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 998052230}
+    - target: {fileID: 834430116821482722, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 208961213}
+    - target: {fileID: 974089737133349587, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 998052230}
+    - target: {fileID: 974089737133349587, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 208961213}
     - target: {fileID: 1273195806078379926, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_margin.z
       value: -508.28485
       objectReference: {fileID: 0}
-    - target: {fileID: 1405634203570518637, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 123.438
+    - target: {fileID: 1777222958174467809, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1405634203570518637, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+    - target: {fileID: 1777222958174467809, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777222958174467809, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 183.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405634203570518637, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.0000076293945
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405634203570518637, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -4.7620964
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2123620567782712736, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_Name
@@ -2864,21 +2941,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 67f417a1bb7160247be1e1062d2ab9a9, type: 3}
-    - target: {fileID: 4676398500685818124, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 135.833
-      objectReference: {fileID: 0}
-    - target: {fileID: 4676398500685818124, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 35.314
-      objectReference: {fileID: 0}
-    - target: {fileID: 4676398500685818124, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -864.084
-      objectReference: {fileID: 0}
-    - target: {fileID: 4676398500685818124, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 467.408
+    - target: {fileID: 4618112289116504906, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 998052230}
+    - target: {fileID: 4618112289116504906, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 208961213}
+    - target: {fileID: 6828045251173472237, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_Name
+      value: Vehicle Images
       objectReference: {fileID: 0}
     - target: {fileID: 7169728057976618133, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2964,6 +3037,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7523853927108371168, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_text
+      value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341898934706026458, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 998052230}
+    - target: {fileID: 8341898934706026458, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 208961213}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1103574683063462836, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
@@ -2973,6 +3063,17 @@ PrefabInstance:
       addedObject: {fileID: 1535812538}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+--- !u!114 &578987451880747495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8014493982717940438, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+  m_PrefabInstance: {fileID: 578987451880747494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3668804988187899864
 PrefabInstance:
   m_ObjectHideFlags: 0
