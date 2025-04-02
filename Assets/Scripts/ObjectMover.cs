@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ObjectMover : MonoBehaviour
 {
@@ -34,6 +35,10 @@ public class ObjectMover : MonoBehaviour
     private TMP_Text vehicleText;
     public string vehicleName;
     public string vehicleInfo;
+    public Image vehicleImageCanvas;
+    private const int vehicleImageCount = 4;
+    public Sprite[] vehicleImages = new Sprite[vehicleImageCount];
+    private bool triggerFirstImage = false;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +117,17 @@ public class ObjectMover : MonoBehaviour
             vehicleText = vehicleDescObj.GetComponent<TMP_Text>();
         }
 
+        if (vehicleImages.Length < vehicleImageCount)
+        {
+            Debug.LogError("TOO LITTLE IMAGES, THERE SHOULD BE 4!");
+            return;
+        }
+        else if (vehicleImages.Length > vehicleImageCount)
+        {
+            Debug.LogError("TOO MANY IMAGES, THERE SHOULD BE 4!");
+            return;
+        }
+
         // Set the original position and rotation of the object
         originalPos = transform.position;
         originalRot = transform.rotation;
@@ -136,6 +152,12 @@ public class ObjectMover : MonoBehaviour
             // Set the text to car on platform
             vehicleHeader.SetText(vehicleName);
             vehicleText.SetText(vehicleInfo);
+        }
+
+        if (isOnPlatform && !triggerFirstImage)
+        {
+            SelectionOne();
+            triggerFirstImage = true;
         }
     }
 
@@ -183,6 +205,7 @@ public class ObjectMover : MonoBehaviour
         {
             platformAnim.SetInteger("objectState", 4);
             menuAnim.SetBool("infoOpen", false);
+            triggerFirstImage = false;
         }
 
         // Sets to false so the object is only placed when held
@@ -203,6 +226,38 @@ public class ObjectMover : MonoBehaviour
 
             // Set the platform as the parent of the object
             this.transform.SetParent(platformTransform);
+        }
+    }
+
+    public void SelectionOne()
+    {
+        if (isOnPlatform)
+        {
+            vehicleImageCanvas.sprite = vehicleImages[0];
+        }
+    }
+
+    public void SelectionTwo()
+    {
+        if (isOnPlatform)
+        {
+            vehicleImageCanvas.sprite = vehicleImages[1];
+        }
+    }
+
+    public void SelectionThree()
+    {
+        if (isOnPlatform)
+        {
+            vehicleImageCanvas.sprite = vehicleImages[2];
+        }
+    }
+
+    public void SelectionFour()
+    {
+        if (isOnPlatform)
+        {
+            vehicleImageCanvas.sprite = vehicleImages[3];
         }
     }
 }
