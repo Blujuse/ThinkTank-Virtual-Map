@@ -1795,7 +1795,7 @@ MonoBehaviour:
   yOffset: 0.15
   isOnPlatform: 0
   vehicleName: MG J2 Midget
-  vehicleInfo: This is the MG J2 Midget description
+  vehicleInfo: "- Started production in 1932-1934, costing \xA3199!"
   vehicleImageCanvas: {fileID: 578987451880747495}
   vehicleImages:
   - {fileID: 21300000, guid: 0e6e5beb22c69bd4fbd1dd0b9427b292, type: 3}
