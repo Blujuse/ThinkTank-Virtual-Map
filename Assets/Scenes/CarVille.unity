@@ -580,8 +580,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0.57
   isOnPlatform: 0
-  vehicleName: Rover 3500
-  vehicleInfo: This is the Rover description
+  vehicleName: Rover SD1, 1976
+  vehicleInfo: '- Although unassuming looking, the Rover SD1 won the 1977 European
+    Car of the Year award!
+
+
+    - The top-spec version featured a 3.5L Rover V8
+    engine, known for its light weight and tunability.
+
+
+    - The SD1 also had a
+    Group A touring car variant that competed successfully in motorsport!
+
+
+    -
+    The sleek fastback styling was inspired by cars like the Ferrari Daytona, giving
+    it a modern and sporty silhouette for a saloon car.
+
+
+'
   vehicleImageCanvas: {fileID: 578987451880747495}
   vehicleImages:
   - {fileID: 0}
@@ -1794,8 +1811,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0.15
   isOnPlatform: 0
-  vehicleName: MG J2 Midget
-  vehicleInfo: "- Started production in 1932-1934, costing \xA3199!"
+  vehicleName: MG J2 Midget, 1932
+  vehicleInfo: "- Started production in 1932-1934, costing \xA3199!                                                               
+    \n\n- The MG J2 improved on the J1 with better performance and a two-seat layout
+    that defined MG\u2019s sports car style for years.                                                 
+    \n\n- Only around 2,000 units were produced making the J2 rare and sought after
+    by collectors.                                                                              
+    \n\n- Despite its small engine, 847cc, it was popular with racers and tuners
+    because it responed well to aftermarket upgrades."
   vehicleImageCanvas: {fileID: 578987451880747495}
   vehicleImages:
   - {fileID: 21300000, guid: 0e6e5beb22c69bd4fbd1dd0b9427b292, type: 3}
@@ -3117,6 +3140,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -508.28485
       objectReference: {fileID: 0}
+    - target: {fileID: 1273195806078379926, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 58
+      objectReference: {fileID: 0}
     - target: {fileID: 1777222958174467809, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3132,6 +3159,10 @@ PrefabInstance:
     - target: {fileID: 2123620567782712736, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385625260817307490, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 429.3
       objectReference: {fileID: 0}
     - target: {fileID: 3645315360758313452, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_Sprite
@@ -3241,6 +3272,14 @@ PrefabInstance:
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
         eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
         sunt in culpa qui officia deserunt mollit anim id est laborum.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523853927108371168, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_margin.w
+      value: -465.95117
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523853927108371168, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 37.8
       objectReference: {fileID: 0}
     - target: {fileID: 8341898934706026458, guid: e1e2f2bc98bc86747bf8d1fa96cca747, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -34,7 +34,7 @@ public class ObjectMover : MonoBehaviour
     private TMP_Text vehicleHeader;
     private TMP_Text vehicleText;
     public string vehicleName;
-    public string vehicleInfo;
+    [TextArea(15, 20)] public string vehicleInfo;
     public Image vehicleImageCanvas;
     private const int vehicleImageCount = 4;
     public Sprite[] vehicleImages = new Sprite[vehicleImageCount];
