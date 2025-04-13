@@ -601,10 +601,10 @@ MonoBehaviour:
 '
   vehicleImageCanvas: {fileID: 578987451880747495}
   vehicleImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 73c7d268f55e31341b7a1f3bb5296952, type: 3}
+  - {fileID: 21300000, guid: 6f48e5136fdce6746a683ccf906d6179, type: 3}
+  - {fileID: 21300000, guid: ce64a0dc62071134891db40c2f62b749, type: 3}
+  - {fileID: 21300000, guid: 80175d3dfe434f84d94f62cc3fbc6fb2, type: 3}
 --- !u!1 &284042965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,10 +1821,10 @@ MonoBehaviour:
     because it responed well to aftermarket upgrades."
   vehicleImageCanvas: {fileID: 578987451880747495}
   vehicleImages:
-  - {fileID: 21300000, guid: 0e6e5beb22c69bd4fbd1dd0b9427b292, type: 3}
-  - {fileID: 21300000, guid: 67f417a1bb7160247be1e1062d2ab9a9, type: 3}
-  - {fileID: 21300000, guid: f2f01e29a1e7a084a8e0e14b6ea513c7, type: 3}
-  - {fileID: 21300000, guid: 5c43e365246bad34fa9627cca5d9bb41, type: 3}
+  - {fileID: 21300000, guid: 05b0b0a0628b7574a9d63ad6db33a978, type: 3}
+  - {fileID: 21300000, guid: 81b5f835353e3e34db408a6ecbccc20d, type: 3}
+  - {fileID: 21300000, guid: 58b433b2ee5c8da42a3bff6db7a8725a, type: 3}
+  - {fileID: 21300000, guid: 39615c1bdf7f09545a5af66e5962eb8b, type: 3}
 --- !u!54 &998052231
 Rigidbody:
   m_ObjectHideFlags: 0

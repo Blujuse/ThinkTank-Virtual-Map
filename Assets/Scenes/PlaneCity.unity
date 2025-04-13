@@ -2445,10 +2445,10 @@ MonoBehaviour:
     many of which still fly today!'
   vehicleImageCanvas: {fileID: 886126471}
   vehicleImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: feae52edf30edd54399427755376a076, type: 3}
+  - {fileID: 21300000, guid: 7b287b605ebf0b540920c26f1ea7345a, type: 3}
+  - {fileID: 21300000, guid: cf7046e88c7296c4fac58d25405a09b6, type: 3}
+  - {fileID: 21300000, guid: 8b4c7513a7d5a29458bd47ccf746ae2f, type: 3}
 --- !u!54 &1194252746
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2841,10 +2841,10 @@ MonoBehaviour:
     aircraft ever!'
   vehicleImageCanvas: {fileID: 886126471}
   vehicleImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: c86e97888241681469759b87082e78b1, type: 3}
+  - {fileID: 21300000, guid: ef0bde58625706d479ae2647c734c848, type: 3}
+  - {fileID: 21300000, guid: 1c32bf379e3a8b5419c33a21558b7f59, type: 3}
+  - {fileID: 21300000, guid: b0af14ab47139d449b9dcd8af3e43e93, type: 3}
 --- !u!54 &2046563341
 Rigidbody:
   m_ObjectHideFlags: 0
