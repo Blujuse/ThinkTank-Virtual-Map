@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5c80d49013691df48ac94280337e88ce, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.36782044, g: 0.46907017, b: 0.5597859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -718,7 +718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: 498}
+  m_AnchoredPosition: {x: -664, y: 504}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &506138358
@@ -768,8 +768,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 78
-  m_fontSizeBase: 78
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2289,7 +2289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -660, y: 412}
+  m_AnchoredPosition: {x: -660, y: 433}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1168741607
@@ -2344,8 +2344,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46
-  m_fontSizeBase: 46
+  m_fontSize: 37.8
+  m_fontSizeBase: 37.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2358,7 +2358,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -27
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -626.9531, w: -430.39502}
+  m_margin: {x: 0, y: 0, z: -626.9531, w: -457.50974}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2427,14 +2427,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0.25
   isOnPlatform: 0
-  vehicleName: Plane 2
-  vehicleInfo: This is the plane 2 description
+  vehicleName: The Hurricane, 1937
+  vehicleInfo: '- While overshadowed by the Spitfire, the Hurricane shot down more
+    enemy aircrafts than all other British fighters combined!
+
+
+    - Some Hurricanes
+    were built in factories diguised as bus depots or warehouses to avoid detection
+    from the Germans during WWII.
+
+
+    - While not as fast as the Spitfire, pilots
+    loved its stability and reliability.
+
+
+    - Over 14,000 Hurricanes were built,
+    many of which still fly today!'
   vehicleImageCanvas: {fileID: 886126471}
   vehicleImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: feae52edf30edd54399427755376a076, type: 3}
+  - {fileID: 21300000, guid: 7b287b605ebf0b540920c26f1ea7345a, type: 3}
+  - {fileID: 21300000, guid: cf7046e88c7296c4fac58d25405a09b6, type: 3}
+  - {fileID: 21300000, guid: 8b4c7513a7d5a29458bd47ccf746ae2f, type: 3}
 --- !u!54 &1194252746
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2809,14 +2823,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0.15
   isOnPlatform: 0
-  vehicleName: Spitfire
-  vehicleInfo: This is the spitfire description
+  vehicleName: The Spitfire, 1936
+  vehicleInfo: '- The Spitfire played a key rle in the Battle of Britan, making it
+    a symbol of Britain during WWII.
+
+
+    - There were over 20 variants of the Spitfire
+    made! As it was consistently upgraded throughout the war.
+
+
+    - Some models
+    of the Spitfire could reach over 400 mph! One of the fastest planes of its time!
+
+
+    -
+    Over 20,000 Spitfires were produced, making it the most produced British fighter
+    aircraft ever!'
   vehicleImageCanvas: {fileID: 886126471}
   vehicleImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: c86e97888241681469759b87082e78b1, type: 3}
+  - {fileID: 21300000, guid: ef0bde58625706d479ae2647c734c848, type: 3}
+  - {fileID: 21300000, guid: 1c32bf379e3a8b5419c33a21558b7f59, type: 3}
+  - {fileID: 21300000, guid: b0af14ab47139d449b9dcd8af3e43e93, type: 3}
 --- !u!54 &2046563341
 Rigidbody:
   m_ObjectHideFlags: 0
