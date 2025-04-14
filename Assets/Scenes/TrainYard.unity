@@ -6792,10 +6792,10 @@ MonoBehaviour:
     including one at Thinktank!'
   vehicleImageCanvas: {fileID: 1247992973}
   vehicleImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: f47aaaa53f18e444f8a3dec2caa03326, type: 3}
+  - {fileID: 21300000, guid: d7ad7de2dc203a142871578f3e81f088, type: 3}
+  - {fileID: 21300000, guid: b1feeef98c8dde043bd6257c4302a71f, type: 3}
+  - {fileID: 21300000, guid: aac02e1127e2bec4aaa1f50d33479b38, type: 3}
 --- !u!54 &1194252746
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7280,10 +7280,10 @@ MonoBehaviour:
     to travel longer distances!'
   vehicleImageCanvas: {fileID: 1247992973}
   vehicleImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 019c3800d26d8564cb7737ba2919f72a, type: 3}
+  - {fileID: 21300000, guid: 959e018f30a8d11478d3166a9140d8c6, type: 3}
+  - {fileID: 21300000, guid: a76286d4fe08ea84b80a8b4f8a141de5, type: 3}
+  - {fileID: 21300000, guid: 9598949af9a07834a9786b99e3ff1265, type: 3}
 --- !u!54 &1316762554
 Rigidbody:
   m_ObjectHideFlags: 0
