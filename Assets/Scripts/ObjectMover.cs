@@ -227,6 +227,13 @@ public class ObjectMover : MonoBehaviour
             // Set the platform as the parent of the object
             this.transform.SetParent(platformTransform);
         }
+
+        if (other.CompareTag("KillBox"))
+        {
+            // Reset position and rotation if moved out bounds
+            transform.position = originalPos;
+            transform.rotation = originalRot;
+        }
     }
 
     public void SelectionOne()
