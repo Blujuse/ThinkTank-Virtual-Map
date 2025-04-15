@@ -9,6 +9,14 @@ public class MenuController : MonoBehaviour
     public GameObject loadingScreen;
     public Image loadingBar;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     // Load back to the menu
     public void BackToTheMenu()
     {
