@@ -8,6 +8,7 @@ TagManager:
   - Menu
   - Header
   - Desc
+  - KillBox
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,6 @@ public class AttractScreenManager : MonoBehaviour
 
     [Header("UI Stuff")]
     public float timer;
-    [SerializeField] private GameObject AttractScreen;
     private Coroutine timeoutCoroutine;
 
     private void Start()
@@ -56,7 +55,7 @@ public class AttractScreenManager : MonoBehaviour
         float elapsedTime = 0f;
 
         // Continue checking for inactivity over time
-        while (elapsedTime < 5f)
+        while (elapsedTime < 30f)
         {
             if (input)
             {
