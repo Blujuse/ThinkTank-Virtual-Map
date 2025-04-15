@@ -34,7 +34,7 @@ public class ObjectMover : MonoBehaviour
     private TMP_Text vehicleHeader;
     private TMP_Text vehicleText;
     public string vehicleName;
-    public string vehicleInfo;
+    [TextArea(15, 20)] public string vehicleInfo;
     public Image vehicleImageCanvas;
     private const int vehicleImageCount = 4;
     public Sprite[] vehicleImages = new Sprite[vehicleImageCount];
@@ -226,6 +226,13 @@ public class ObjectMover : MonoBehaviour
 
             // Set the platform as the parent of the object
             this.transform.SetParent(platformTransform);
+        }
+
+        if (other.CompareTag("KillBox"))
+        {
+            // Reset position and rotation if moved out bounds
+            transform.position = originalPos;
+            transform.rotation = originalRot;
         }
     }
 
