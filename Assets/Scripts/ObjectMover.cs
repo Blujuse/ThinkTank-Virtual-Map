@@ -40,6 +40,10 @@ public class ObjectMover : MonoBehaviour
     public Sprite[] vehicleImages = new Sprite[vehicleImageCount];
     private bool triggerFirstImage = false;
 
+    [Header("Sound Variables")]
+    private AudioSource audioSource;
+    public AudioClip objectGrabSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -128,6 +132,14 @@ public class ObjectMover : MonoBehaviour
             return;
         }
 
+        // Get the audio source & check if it exists
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("No audio source found");
+            return;
+        }
+
         // Set the original position and rotation of the object
         originalPos = transform.position;
         originalRot = transform.rotation;
@@ -178,6 +190,12 @@ public class ObjectMover : MonoBehaviour
         if (this.transform.parent != null)
         {
             this.transform.SetParent(null);
+        }
+
+        // Play sound when object is grabbed
+        if (audioSource != null && !audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(objectGrabSound);
         }
     }
 
