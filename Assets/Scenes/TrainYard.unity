@@ -755,7 +755,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 584680925}
         m_TargetAssemblyTypeName: HelpManager, Assembly-CSharp
         m_MethodName: AudioMute
         m_Mode: 1

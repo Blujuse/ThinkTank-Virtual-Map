@@ -145,7 +145,6 @@ public class ObjectMover : MonoBehaviour
         originalRot = transform.rotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isOnPlatform)
@@ -159,6 +158,7 @@ public class ObjectMover : MonoBehaviour
 
             // Make platform move to the left when object is placed on it
             platformAnim.SetInteger("objectState", 2);
+            menu.SetActive(true);
             menuAnim.SetBool("infoOpen", true);
 
             // Set the text to car on platform
@@ -180,12 +180,12 @@ public class ObjectMover : MonoBehaviour
 
         // Set to false, to let model be moved off platform
         isOnPlatform = false;
-        
+
         if (platformScript != null)
         {
             platformScript.objectOnPlatform = false;
         }
-        
+
         // Remove child to stop it getting rotated when not on platform
         if (this.transform.parent != null)
         {
@@ -223,6 +223,7 @@ public class ObjectMover : MonoBehaviour
         {
             platformAnim.SetInteger("objectState", 4);
             menuAnim.SetBool("infoOpen", false);
+            MenuHider();
             triggerFirstImage = false;
         }
 
@@ -284,5 +285,12 @@ public class ObjectMover : MonoBehaviour
         {
             vehicleImageCanvas.sprite = vehicleImages[3];
         }
+    }
+
+    IEnumerator MenuHider()
+    {
+        yield return new WaitForSeconds(2f);
+
+        menu.SetActive(false);
     }
 }
